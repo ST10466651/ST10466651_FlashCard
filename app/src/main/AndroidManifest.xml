@@ -13,6 +13,10 @@
         android:theme="@style/Theme.ST10466651_FlashCard"
         tools:targetApi="31">
         <activity
+            android:name=".Quiz"
+            android:exported="false"
+            android:theme="@style/Theme.ST10466651_FlashCard" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

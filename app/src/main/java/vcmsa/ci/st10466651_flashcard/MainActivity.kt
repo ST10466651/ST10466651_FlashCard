@@ -1,12 +1,15 @@
 package vcmsa.ci.st10466651_flashcard
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
@@ -36,8 +39,10 @@ class MainActivity : AppCompatActivity() {
             insets
         }
         val knowledge = findViewById<TextView>(R.id.textInfo)
+        val start = findViewById<Button>(R.id.btnStart)
 
-
-        knowledge.text = "Welcome to BrainBank - the ultimate flashcard app designed to supercharge your learning! Organize, review and retain information effortlessly. Study smarter, not harder and start building your brainpower today"
+        start.setOnClickListener {
+            val intent = Intent(this, Quiz::class.java)
+        }
     }
 }
